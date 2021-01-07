@@ -1,0 +1,76 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.6rem;
+	background: rgb(6, 4, 20);
+	min-height: 100vh;
+	display: flex;
+	color: #ffffff;
+}
+
+.container {
+	margin: auto;
+	width: 90%;
+	min-height: 50vh;
+	display: flex;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.item {
+	background-color: red;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.item:hover {
+	flex-grow: 2;
+}
+
+.item:nth-child(1) {
+	background-image: radial-gradient(
+		circle 1294px at -15.5% 23.8%,
+		rgba(255, 206, 149, 1) 0%,
+		rgba(247, 92, 92, 1) 44.9%,
+		rgba(108, 0, 96, 0.97) 93.8%
+	);
+}
+.item:nth-child(2) {
+	background-image: radial-gradient(
+		circle farthest-corner at 24.7% 28.8%,
+		rgba(247, 183, 29, 1) 1.9%,
+		rgba(253, 239, 150, 1) 97.7%
+	);
+}
+.item:nth-child(3) {
+	background-image: linear-gradient(112.1deg, rgba(32, 38, 57, 1) 11.4%, rgba(63, 76, 119, 1) 70.2%);
+}
+.item:nth-child(4) {
+	background-image: radial-gradient(circle 830px at 95.6% -5%, rgba(244, 89, 128, 1) 0%, rgba(223, 23, 55, 1) 90%);
+}
+
+.title {
+	transform: rotate(-90deg);
+	transition: all 0.6s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.item:hover .title {
+	transform: rotate(0);
+	letter-spacing: 1rem;
+}
